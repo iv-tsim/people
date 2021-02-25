@@ -1,50 +1,30 @@
 @font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Bold.eot');
-    src: local('Montserrat Bold'), local('Montserrat-Bold'),
-    url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Montserrat-Bold.woff') format('woff'),
-    url('../fonts/Montserrat-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Medium.eot');
-    src: local('Montserrat Medium'), local('Montserrat-Medium'),
-    url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Montserrat-Medium.woff') format('woff'),
-    url('../fonts/Montserrat-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Light.eot');
-    src: local('Montserrat Light'), local('Montserrat-Light'),
-    url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Montserrat-Light.woff') format('woff'),
-    url('../fonts/Montserrat-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Regular.eot');
-    src: local('Montserrat Regular'), local('Montserrat-Regular'),
-    url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Montserrat-Regular.woff') format('woff'),
-    url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl-Book.eot');
+    src: local('Stolzl Book'), local('Stolzl-Book'),
+    url('../fonts/Stolzl-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Stolzl-Book.woff') format('woff'),
+    url('../fonts/Stolzl-Book.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Black.eot');
-    src: local('Montserrat Black'), local('Montserrat-Black'),
-    url('../fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Montserrat-Black.woff') format('woff'),
-    url('../fonts/Montserrat-Black.ttf') format('truetype');
-    font-weight: 900;
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl-Medium.eot');
+    src: local('Stolzl Medium'), local('Stolzl-Medium'),
+    url('../fonts/Stolzl-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Stolzl-Medium.woff') format('woff'),
+    url('../fonts/Stolzl-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl-Bold.eot');
+    src: local('Stolzl Bold'), local('Stolzl-Bold'),
+    url('../fonts/Stolzl-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Stolzl-Bold.woff') format('woff'),
+    url('../fonts/Stolzl-Bold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
 }

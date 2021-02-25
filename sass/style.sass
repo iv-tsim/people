@@ -11,9 +11,9 @@
     margin: 0
 
 body
-    //font-family: 'Roboto', sans-serif
-    //font-size: 18px
-    //font-weight: 400
+    font-family: 'Stolzl', sans-serif
+    font-size: 20px
+    font-weight: 400
     color: #000000
 
 a
@@ -26,6 +26,7 @@ a
     min-height: 100vh
     width: 100%
     overflow-x: hidden
+    background-color: #fff
 
 .content
     flex: 1 0 auto
@@ -34,7 +35,7 @@ a
     flex: 0 0 auto
 
 .container
-    max-width: 1210px
+    max-width: 1670px
     padding: 0 15px
     margin: 0 auto
 
@@ -85,7 +86,32 @@ textarea, input
     -moz-appearance: none
     border-radius: 0
 
+.btn
+    font-weight: 500
+    text-transform: uppercase
+    color: $blue
+    padding: 20px 40px
+    border: 2px solid $blue
+    &_filled
+        color: #fff
+        border: none
+        padding: 22px 70px
+        background-color: $blue
 
+.section
+    &-title
+        font-weight: 500
+        font-size: 70px
+        color: #fff
+        line-height: 115%
+        &_black
+            color: #000
+    &-subtitle
+        font-weight: 400
+        font-size: 30px
+        line-height: 130%
+
+@import ./_header.sass
 
 // Файлы, относящиеся ко всем страницам
 
