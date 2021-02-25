@@ -144,6 +144,10 @@ textarea, input {
   line-height: 130%;
 }
 
+.section-subtitle_black {
+  color: #000;
+}
+
 .header {
   padding: 30px 0;
 }
@@ -301,6 +305,109 @@ textarea, input {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.advantages {
+  padding-top: 170px;
+  padding-bottom: 30px;
+}
+
+.advantages-title {
+  max-width: 1350px;
+  margin-bottom: 45px;
+}
+
+.advantages-subtitle {
+  max-width: 1200px;
+  margin-bottom: 130px;
+}
+
+.advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: calc(100% + 200px);
+  margin-left: -100px;
+}
+
+.advantages-item {
+  margin: 0 100px 140px 100px;
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+}
+
+.advantages-item__number, .advantages-item__title, .advantages-item__text {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: .3s color;
+  transition: .3s color;
+}
+
+.advantages-item__number {
+  color: #0066FF;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.advantages-item__title {
+  font-size: 40px;
+  line-height: 125%;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.advantages-item__text {
+  line-height: 150%;
+}
+
+.advantages-item__dec {
+  position: absolute;
+  width: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 100%;
+  z-index: 0;
+  -webkit-transition: .3s width;
+  transition: .3s width;
+}
+
+.advantages-item__dec::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 102, 255, 0.8);
+  border-radius: 100%;
+}
+
+.advantages-item__dec-inner {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.advantages-item:hover .advantages-item__dec {
+  width: 140%;
+}
+
+.advantages-item:hover .advantages-item__number, .advantages-item:hover .advantages-item__title, .advantages-item:hover .advantages-item__text {
+  color: #fff;
 }
 
 .alertify-notifier .ajs-message.ajs-warning {
