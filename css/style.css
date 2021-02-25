@@ -410,6 +410,57 @@ textarea, input {
   color: #fff;
 }
 
+.strategy {
+  background-color: #FFF500;
+  padding: 30px 0;
+}
+
+.strategy-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.strategy-title {
+  max-width: 900px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 125%;
+}
+
+.strategy-number {
+  position: relative;
+  margin-right: 140px;
+}
+
+.strategy-number__number {
+  color: #fff;
+  font-weight: 700;
+  line-height: 70%;
+  font-size: 450px;
+}
+
+.strategy-number__text {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 90%;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  text-align: right;
+}
+
+.strategy-number__text span:last-child {
+  margin-right: -75px;
+}
+
 .alertify-notifier .ajs-message.ajs-warning {
   background: white;
   -webkit-box-shadow: 0 0 3px #333333;
