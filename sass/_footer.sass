@@ -1,0 +1,97 @@
+.footer
+    display: flex
+    justify-content: space-between
+    background-color: #000
+    color: #fff
+    &-main, &-map
+        width: 50%
+    &-main
+        padding-top: 180px
+        padding-bottom: 100px
+        padding-left: calc((100% - 1640px) / 2)
+        padding-right: 120px
+    &-title
+        margin-bottom: 90px
+    &-center
+        display: flex
+        justify-content: space-between
+        margin-bottom: 85px
+    &-text
+        display: flex
+        flex-direction: column
+    &-contacts
+        max-width: 400px
+        flex-grow: 1
+    &-item
+        margin-bottom: 40px
+        &__title
+            color: $blue
+            margin-bottom: 25px
+            font-size: 18px
+        &__text
+            color: #fff
+    &-btns
+        display: flex
+        flex-direction: column
+    &-btn
+        width: 175px
+        height: 175px
+        border: 2px solid #fff
+        border-radius: 100%
+        color: #fff
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        padding: 10px
+        position: relative
+        font-weight: 500
+        transition: .3s z-index, .3s background-color, .3s border-color, .3s color
+        &:nth-child(n + 2)
+            margin-top: -20px
+        &:hover
+            z-index: 1
+            background-color: $yellow
+            border-color: $yellow
+            color: #000
+    &-socials
+        display: flex
+        align-items: center
+        &__item
+            margin-right: 75px
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            &::after
+                position: absolute
+                display: block
+                content: ''
+                top: 50%
+                left: 50%
+                width: 80px
+                height: 80px
+                background-color: #000
+                border-radius: 100%
+                transition: .3s background-color
+                transform: translate(-50%, -50%)
+            svg
+                fill: #fff
+                transition: .3s fill
+                position: relative
+                z-index: 1
+            &:last-child
+                margin-right: 0
+            &:hover
+                &::after
+                    background-color: #fff
+                svg
+                    fill: #000
+    &-bottom
+        display: flex
+        justify-content: space-between
+        &__item
+            color: #fff
+            font-size: 12px
+    &-map [class$="ground-pane"], &-map [class$="copyrights-pane"]
+        filter: invert(1) grayscale(100%)
