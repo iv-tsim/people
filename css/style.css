@@ -328,7 +328,7 @@ textarea, input {
 }
 
 .hero-main {
-  width: 100%;
+  width: 71%;
   -ms-flex-item-align: end;
       align-self: flex-end;
   border-radius: 100%;
@@ -403,14 +403,19 @@ textarea, input {
 }
 
 .hero-list {
-  min-width: 550px;
-  width: 550px;
+  width: 29%;
 }
 
 .hero-item {
   background-color: #000;
-  height: 550px;
-  padding: 60px;
+  position: relative;
+}
+
+.hero-item__inner {
+  width: 100%;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .hero-item:first-child {
@@ -420,6 +425,25 @@ textarea, input {
 .hero-item:hover .hero-item__img {
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
+}
+
+.hero-item__main {
+  padding: 60px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .hero-item__img {
@@ -462,16 +486,6 @@ textarea, input {
 
 .hero-item_special {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .hero-item_special::before {
