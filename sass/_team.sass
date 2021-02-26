@@ -1,0 +1,30 @@
+.team
+    background-color: #000
+    padding-bottom: 220px
+    &-title, &-subtitle
+        text-align: center
+    &-title
+        margin-bottom: 35px
+    &-subtitle
+        max-width: 850px
+        margin: 0 auto
+        margin-bottom: 110px
+    &-list
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        grid-column-gap: 60px
+        grid-row-gap: 60px
+    &-item
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+        border-radius: 100%
+        grid-column: span 4
+        &__inner
+            width: 100%
+            display: block
+            opacity: 0
+            visibility: hidden
+        &:nth-child(n + 4)
+            grid-column: span 3
+            grid-gap: 40px
