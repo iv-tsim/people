@@ -374,7 +374,7 @@ textarea, input {
 .hero-video__main {
   position: absolute;
   top: 50%;
-  left: 56%;
+  left: 55%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 2;
