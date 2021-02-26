@@ -1,0 +1,140 @@
+.hero
+    display: flex
+    background-color: #000
+    color: #fff
+    background-image: url(../img/hero/bg.png)
+    background-repeat: no-repeat
+    background-position: center top
+    background-size: contain
+    position: relative
+    &-main
+        width: 100%
+        align-self: flex-end
+        border-radius: 100%
+        border: 1px solid transparentize(#fff, .7)
+        position: relative
+        &__inner
+            display: block
+            width: 100%
+            opacity: 0
+            visibility: hidden
+    &-video
+        border-radius: 100%
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 65%
+        &__img
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 100%
+            border-radius: 100%
+            opacity: 0.4
+        &__inner
+            display: block
+            width: 100%
+            opacity: 0
+            visibility: hidden
+        &__main
+            position: absolute
+            top: 50%
+            left: 56%
+            transform: translate(-50%, -50%)
+            z-index: 2
+            width: 16.6%
+        &__arrow
+            fill: $blue
+            cursor: pointer
+            transition: .3s fill
+            width: 100%
+            &:hover
+                fill: $yellow
+        &__text
+            position: absolute
+            left: 0
+            bottom: -65%
+            width: 200px
+            line-height: 150%
+            text-transform: uppercase
+    &-list
+        min-width: 550px
+        width: 550px
+    &-item
+        background-color: #000
+        height: 550px
+        padding: 60px
+        &:first-child
+            border-bottom: 1px solid transparentize(#fff, .7)
+        &:hover
+            .hero-item__img
+                transform: scale(.7)
+        &__img
+            margin-bottom: 35px
+            transform-origin: 0 100%
+            transition: .3s transform
+        &__title
+            font-weight: 500
+            font-size: 30px
+            line-height: 130%
+            text-transform: uppercase
+            max-width: 350px
+        &__subtitle
+            margin-top: 25px
+            text-transform: uppercase
+            font-weight: 500
+            line-height: 150%
+            color: $gray
+            max-width: 360px
+        &__top
+            flex-grow: 1
+            position: relative
+            z-index: 1
+        &__btn
+            position: relative
+            z-index: 1
+        &_special
+            position: relative
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            &::before 
+                position: absolute
+                display: block
+                content: ''
+                width: 100%
+                height: 100%
+                top: 0
+                left: 0
+                background-color: $blue
+                z-index: 0
+                border-radius: 0
+                transition: .3s border-radius linear
+            .hero-item__subtitle
+                color: #fff
+                margin-top: 15px
+            &__img
+                position: absolute
+                left: 65px
+                bottom: 0
+            &:hover
+                &::before
+                    border-radius: 100%
+    &-text
+        position: absolute
+        left: calc((100% - 1640px) / 2)
+        top: 140px
+        z-index: 1
+        &__title
+            max-width: 950px
+            margin-bottom: 70px
+            span
+                font-weight: 400
+                display: block
+        &__subtitle
+            max-width: 505px
+            font-size: 40px
+            line-height: 125%
+            font-weight: 400

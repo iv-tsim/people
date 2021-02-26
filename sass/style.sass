@@ -97,6 +97,9 @@ textarea, input
     padding: 20px 40px
     border: 2px solid $blue
     transition: .3s border-color, .3s color
+    &:hover
+        color: #000
+        border-color: $yellow
     &_filled
         color: #fff
         border: none
@@ -106,9 +109,14 @@ textarea, input
         &:hover
             color: #000
             background-color: $yellow
-    &:hover
+    &_white
         color: #000
-        border-color: $yellow
+        padding: 20px 45px
+        background-color: #fff
+        border: none
+        transition: .3s background-color
+        &:hover
+            background-color: $yellow
 
 .input
     border-bottom: 4px solid #000
