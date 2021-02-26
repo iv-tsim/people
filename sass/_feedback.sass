@@ -1,0 +1,35 @@
+.feedback
+    padding: 190px 0
+    &-title
+        margin-bottom: 40px
+        text-align: center
+    &-subtitle
+        max-width: 1250px
+        text-align: center
+        margin: 0 auto
+        margin-bottom: 90px
+    &-tabs
+        display: flex
+        max-width: 1130px
+        margin: 0 auto
+        margin-bottom: 100px
+        justify-content: space-between
+        &__item
+            flex-basis: 200px
+            flex-grow: 1
+            margin: 0 15px
+            border: 3px solid #000
+            font-weight: 500
+            text-transform: uppercase
+            padding: 35px 50px
+            text-align: center
+            transition: .3s color, .3s border-color, .3s background-color
+            cursor: pointer
+            &:hover
+                border-color: $blue
+                background-color: $blue
+                color: #fff
+        &__item.active
+            border-color: $blue
+            background-color: $blue
+            color: #fff
