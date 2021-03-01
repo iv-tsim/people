@@ -1563,6 +1563,113 @@ ul li:last-child {
   grid-gap: 40px;
 }
 
+.team-modal {
+  max-width: 940px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #fff;
+  display: none;
+}
+
+.team-modal__photo {
+  background-repeat: no-repeat;
+  background-position: center -20px;
+  background-size: cover;
+  min-width: 500px;
+  width: 500px;
+  margin-right: 40px;
+  position: relative;
+  border-radius: 100%;
+}
+
+.team-modal__photo::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 106%;
+  height: 106%;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid #fff;
+}
+
+.team-modal__photo-inner {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.team-modal__body {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.team-modal__title {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.team-modal__position {
+  color: #FFF500;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.team-modal__list {
+  list-style: none;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.team-modal__list li {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.team-modal__list li::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #FFF500;
+  top: 10px;
+  left: 0;
+}
+
+.team-modal__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team-modal__socials-item {
+  fill: #fff;
+  -webkit-transition: .3s fill;
+  transition: .3s fill;
+}
+
+.team-modal__socials-item:hover {
+  fill: #FFF500;
+}
+
 .app {
   padding-top: 175px;
 }

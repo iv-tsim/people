@@ -53,3 +53,71 @@
         &:nth-child(n + 4)
             grid-column: span 3
             grid-gap: 40px
+    &-modal
+        max-width: 940px
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        color: #fff
+        display: none
+        &__photo
+            background-repeat: no-repeat
+            background-position: center -20px
+            background-size: cover
+            min-width: 500px
+            width: 500px
+            margin-right: 40px
+            position: relative
+            border-radius: 100%
+            &::after
+                position: absolute
+                content: ''
+                display: block
+                width: 106%
+                height: 106%
+                border-radius: 100%
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                border: 1px solid #fff
+            &-inner
+                display: block
+                width: 100%
+                opacity: 0
+                visibility: hidden
+        &__body
+            align-self: flex-end
+        &__title
+            font-size: 40px
+            font-weight: 500
+            margin-bottom: 25px
+        &__position
+            color: $yellow
+            margin-bottom: 30px
+            font-size: 24px
+        &__list
+            list-style: none
+            font-size: 24px
+            margin-bottom: 30px
+            li
+                margin-bottom: 30px
+                position: relative
+                padding-left: 20px
+                &::after
+                    position: absolute
+                    display: block
+                    content: ''
+                    width: 6px
+                    height: 6px
+                    border-radius: 100%
+                    background-color: $yellow
+                    top: 10px
+                    left: 0
+        &__socials
+            display: flex
+            align-items: center
+            &-item
+                fill: #fff
+                transition: .3s fill
+                &:hover
+                    fill: $yellow
