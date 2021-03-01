@@ -161,6 +161,7 @@ textarea, input {
 
 .arrow {
   position: relative;
+  color: #fff;
 }
 
 .arrow-circle {
@@ -213,8 +214,11 @@ textarea, input {
           transform-origin: 50% 50%;
 }
 
+.arrow-circle__img {
+  fill: #000;
+}
+
 .arrow-text {
-  color: #fff;
   font-weight: 500;
   font-size: 30px;
   margin-left: 60px;
@@ -234,6 +238,22 @@ textarea, input {
 
 .arrow:hover .arrow-text {
   margin-left: 130px;
+}
+
+.arrow_black {
+  color: #000;
+}
+
+.arrow_black .arrow-circle__empty {
+  border: 1px solid #000;
+}
+
+.arrow_black .arrow-circle__filled {
+  background-color: #000;
+}
+
+.arrow_black .arrow-circle__img {
+  fill: #fff;
 }
 
 ul {
@@ -1130,8 +1150,9 @@ ul li:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1130px;
-  margin: 0 auto;
+  padding-left: 16.7%;
+  padding-left: calc((100% - 1130px) / 2);
+  padding-right: calc((100% - 1130px) / 2);
   margin-bottom: 100px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1165,6 +1186,167 @@ ul li:last-child {
   border-color: #0066FF;
   background-color: #0066FF;
   color: #fff;
+}
+
+.feedback-body {
+  display: none;
+}
+
+.feedback-body.active {
+  display: block;
+}
+
+.feedback-slider__wrapper {
+  padding-left: calc((100% - 1100px) / 2);
+  padding-right: calc((100% - 1100px) / 2);
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.feedback-slider__arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.feedback-slider__arrow_prev {
+  left: 0;
+}
+
+.feedback-slider__arrow_next {
+  right: 0;
+}
+
+.feedback-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.feedback-slide__img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-width: 315px;
+  width: 315px;
+  margin-right: 80px;
+}
+
+.feedback-slide__img-inner {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.feedback-slide__main {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.feedback-slide__title {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 125%;
+  margin-bottom: 40px;
+}
+
+.feedback-slide__text {
+  margin-bottom: 80px;
+}
+
+.feedback-slide__list {
+  margin-bottom: 80px;
+}
+
+.feedback-slide__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #000;
+  padding: 12px 20px;
+}
+
+.feedback-slide__list-item:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.feedback-slide__list-item__name {
+  position: relative;
+  padding-left: 14px;
+  margin-right: 10px;
+}
+
+.feedback-slide__list-item__name::after {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  display: block;
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 100%;
+}
+
+.feedback-slide__list-item__value {
+  font-weight: 500;
+}
+
+.feedback-slide__list-item.active {
+  background-color: #FFF500;
+}
+
+.feedback-thumbs__item {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 146px;
+  cursor: pointer;
+  position: relative;
+}
+
+.feedback-thumbs__item::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border: 3px solid #FFF500;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s opacity, .3s visibility;
+  transition: .3s opacity, .3s visibility;
+}
+
+.feedback-thumbs__item-inner {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.feedback-thumbs__item:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.feedback-thumbs__item.swiper-slide-thumb-active::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .team {

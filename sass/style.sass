@@ -120,6 +120,7 @@ textarea, input
 
 .arrow
     position: relative
+    color: #fff
     &-circle
         position: absolute
         width: 125px
@@ -153,8 +154,9 @@ textarea, input
             transform: scale(0)
             transition: .3s transform
             transform-origin: 50% 50%
+        &__img
+            fill: #000
     &-text
-        color: #fff
         font-weight: 500
         font-size: 30px
         margin-left: 60px
@@ -166,6 +168,14 @@ textarea, input
             transform: scale(1)
         .arrow-text
             margin-left: 130px
+    &_black
+        color: #000
+        .arrow-circle__empty
+            border: 1px solid #000
+        .arrow-circle__filled
+            background-color:#000
+        .arrow-circle__img
+            fill: #fff
 
 ul
     list-style: none

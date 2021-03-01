@@ -31,6 +31,96 @@ $(document).ready(function() {
 
         }
 
+        let feedbackThumbsResult = new Swiper('.feedback-thumbs_result', {
+
+            speed: 600,
+            spaceBetween: 3,
+            slidesPerView: 11,
+            slidesPerGroup: 1,
+            centerInsufficientSlides: true,
+            freeMode: true,
+            observer: true,
+            observeParents: true,
+            touchEventsTarget: 'wrapper'
+
+        });
+
+        let feedbackSliderResult = new Swiper('.feedback-slider_result', {
+
+            speed: 600,
+            spaceBetween: 15,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            observer: true,
+            observeParents: true,
+            touchEventsTarget: 'wrapper',
+            navigation: {
+                prevEl: '.feedback-slider__arrow.feedback-slider__arrow_prev.feedback-slider__arrow_result',
+                nextEl: '.feedback-slider__arrow.feedback-slider__arrow_next.feedback-slider__arrow_result'
+            },
+            thumbs: {
+                swiper: feedbackThumbsResult
+            }
+
+        });
+
+        let feedbackThumbsComment = new Swiper('.feedback-thumbs_comment', {
+
+            speed: 600,
+            spaceBetween: 3,
+            slidesPerView: 11,
+            slidesPerGroup: 1,
+            centerInsufficientSlides: true,
+            freeMode: true,
+            observer: true,
+            observeParents: true,
+            touchEventsTarget: 'wrapper'
+
+        });
+
+        let feedbackSliderComment = new Swiper('.feedback-slider_comment', {
+
+            speed: 600,
+            spaceBetween: 15,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            observer: true,
+            observeParents: true,
+            touchEventsTarget: 'wrapper',
+            navigation: {
+                prevEl: '.feedback-slider__arrow.feedback-slider__arrow_prev.feedback-slider__arrow_comment',
+                nextEl: '.feedback-slider__arrow.feedback-slider__arrow_next.feedback-slider__arrow_comment'
+            },
+            thumbs: {
+                swiper: feedbackThumbsComment
+            }
+
+        });
+
+        const tabsTop = document.querySelectorAll('.feedback-tabs__item');
+        const tabsBodies = document.querySelectorAll('.feedback-body');
+
+        document.addEventListener('click', function(event) {
+
+            const target = event.target;
+
+            if (target.matches('.feedback-tabs__item')) {
+
+                tabsTop.forEach(function(item, index) {
+
+                    if (target.closest('.feedback-tabs__item') === tabsTop[index]) {
+
+                        show(index, tabsTop, tabsBodies);
+                        return;
+
+                    }
+
+                });
+
+            }
+
+        });
+
         if (document.querySelector('div#map')) {
             ymaps.ready(function () {
                 var myMap = new ymaps.Map('map', {
