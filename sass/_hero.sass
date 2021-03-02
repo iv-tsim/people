@@ -96,6 +96,7 @@
             max-width: 350px
         &__subtitle
             margin-top: 25px
+            font-size: 20px
             text-transform: uppercase
             font-weight: 500
             line-height: 150%
@@ -130,6 +131,7 @@
                 position: absolute
                 left: 65px
                 bottom: 0
+                max-height: 80%
             &:hover
                 &::before
                     border-radius: 100%
@@ -149,3 +151,161 @@
             font-size: 40px
             line-height: 125%
             font-weight: 400
+
+@media (max-width: 1670px)
+    .hero
+        &-text
+            left: 0
+            padding: 0 15px
+            &__title
+                margin-bottom: 50px
+            &__subtitle
+                font-size: 36px
+        &-item
+            &__img
+                max-width: 85px
+                margin-bottom: 25px
+            &__title
+                font-size: 26px
+            &__subtitle
+                margin-top: 15px
+            &__main
+                padding: 40px
+        &-video
+            &__text
+                bottom: -70%
+
+@media (max-width: 1400px)
+    .hero
+        &-text
+            top: 100px
+            &__title
+                margin-bottom: 40px
+                span
+                    display: inline
+            &__subtitle
+                font-size: 30px
+
+
+@media (max-width: 1300px)
+    .hero
+        &-text
+            &__title
+                margin-bottom: 30px
+                max-width: 830px
+            &__subtitle
+                font-size: 28px
+        &-item
+            &__img
+                max-width: 75px
+                margin-bottom: 20px
+            &__title
+                font-size: 24px
+            &__subtitle
+                margin-top: 10px
+                font-size: 18px
+            &_special
+                .hero-item__subtitle
+                    font-size: 18px
+            &__main
+                padding: 30px
+        &-video
+            &__text
+                width: 180px
+
+@media (max-width: 1200px)
+    .hero
+        padding-top: 60px
+        flex-direction: column
+        &-text
+            left: auto
+            top: auto
+            position: relative
+            margin-bottom: 20px
+            &__title
+                max-width: 100%
+            &__subtitle
+                max-width: 100%
+
+        &-main
+            width: 70%
+            margin: 0 auto
+            margin-bottom: 50px
+        &-list
+            display: flex
+            width: 100%
+        &-item
+            flex-grow: 1
+            &:first-child
+                border: none
+            &__title
+                font-size: 22px
+        &-video
+            &__text
+                bottom: -80%
+
+@media (max-width: 1000px)
+    .hero
+        &-list
+            flex-direction: column
+        &-item
+            &__title
+                max-width: 100%
+            &__subtitle
+                max-width: 100%
+            &:first-child
+                border-bottom: 1px solid transparentize(#fff, .7)
+            &__inner
+                display: none
+            &__main
+                position: relative
+            &_special
+                .hero-item__subtitle
+                    margin-bottom: 110px
+                &__img
+                    max-height: 70%
+                    left: 55px
+
+@media (max-width: 900px)
+    .hero
+        &-main
+            width: 80%
+            margin-bottom: 30px
+        &-video
+            width: 75%
+
+@media (max-width: 700px)
+    .hero
+        &-main
+            width: 90%
+        &-video
+            width: 80%
+
+@media (max-width: 600px)
+    .hero
+        &-main
+            width: 100%
+        &-video
+            width: 85%
+
+@media (max-width: 550px)
+    .hero
+        &-video
+            &__text
+                bottom: -85%
+                font-size: 15px
+                width: 155px
+
+@media (max-width: 450px)
+    .hero
+        &-video
+            &__text
+                bottom: -95%
+
+@media (max-width: 350px)
+    .hero
+        &-video
+            &__text
+                font-size: 14px
+                width: 145px
+                bottom: -105%
