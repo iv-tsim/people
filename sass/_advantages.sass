@@ -1,6 +1,7 @@
 .advantages
     padding-top: 170px
     padding-bottom: 30px
+    overflow: hidden
     &-title
         max-width: 1350px
         margin-bottom: 45px
@@ -65,3 +66,96 @@
                 width: 140%
             .advantages-item__number, .advantages-item__title, .advantages-item__text
                 color: #fff
+
+@media (max-width: 1840px)
+    .advantages
+        &-list
+            width: calc(100% + 120px)
+            margin-left: -60px
+        &-item
+            margin: 0 60px 140px 60px
+            flex-basis: 330px
+
+@media (max-width: 1760px)
+    .advantages
+        &-list
+            width: calc(100% + 60px)
+            margin-left: -30px
+        &-item
+            margin: 0 30px 140px 30px
+            flex-basis: 370px
+            &:hover
+                .advantages-item__dec
+                    width: 120%
+
+@media (max-width: 1700px)
+    .advantages
+        padding-top: 140px
+        &-list
+            width: calc(100% + 30px)
+            margin-left: -15px
+        &-item
+            margin: 0 15px 120px 15px
+            flex-basis: 400px
+            &:hover
+                .advantages-item__dec
+                    width: 120%
+            &__number
+                font-size: 26px
+                margin-bottom: 20px
+            &__title
+                font-size: 32px
+                margin-bottom: 20px
+
+@media (max-width: 1400px)
+    .advantages
+        padding-top: 90px
+        &-item
+            flex-basis: 440px
+            margin-bottom: 50px
+            &__dec
+                display: none
+            &:hover
+                .advantages-item__title, .advantages-item__text
+                    color: #000
+                .advantages-item__number
+                    color: $blue
+        &-title
+            max-width: 100%
+            margin-bottom: 35px
+        &-subtitle
+            max-width: 100%
+            margin-bottom: 70px
+
+@media (max-width: 1100px)
+    .advantages
+        padding-top: 60px
+        &-item
+            flex-basis: 400px
+            margin-bottom: 40px
+            &__number
+                font-size: 24px
+                margin-bottom: 15px
+            &__title
+                font-size: 28px
+                margin-bottom: 15px
+        &-title
+            margin-bottom: 30px
+        &-subtitle
+            margin-bottom: 50px
+
+@media (max-width: 800px)
+    .advantages
+        padding-top: 50px
+        &-item
+            margin-bottom: 30px
+            &__number
+                font-size: 22px
+                margin-bottom: 15px
+            &__title
+                font-size: 26px
+                margin-bottom: 15px
+        &-title
+            margin-bottom: 20px
+        &-subtitle
+            margin-bottom: 30px
