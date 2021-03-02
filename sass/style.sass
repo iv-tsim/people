@@ -201,6 +201,8 @@ ul
     padding-right: 10px
     font-size: 30px
     color: #000000
+    transition: .3s border-color
+    background-color: transparent
     &::-webkit-input-placeholder
         font-family: 'Stolzl', sans-serif
         font-size: 30px
@@ -209,6 +211,23 @@ ul
         font-family: 'Stolzl', sans-serif
         font-size: 30px
         color: #000000
+    &:hover, &:focus
+        border-color: $yellow
+    &_white
+        border-color: #fff
+        border-width: 3px
+        padding-bottom: 20px
+        font-size: 20px
+        color: #ffffff
+        transition: .3s border-color
+        &::-webkit-input-placeholder
+            font-family: 'Stolzl', sans-serif
+            font-size: 20px
+            color: #ffffff
+        &:-moz-placeholder
+            font-family: 'Stolzl', sans-serif
+            font-size: 20px
+            color: #ffffff
     
 .submit
     width: 240px
