@@ -2443,6 +2443,48 @@ ul li:last-child {
           transform: translateY(-5px);
 }
 
+.policy {
+  background: #fff;
+  font-size: 16px;
+  color: #000;
+}
+
+.policy-wrapper {
+  display: none;
+  width: 1000px;
+  max-width: 90%;
+}
+
+.policy-wrapper.fancybox-content {
+  padding: 30px 20px;
+  background: #fff;
+}
+
+.policy-wrapper.fancybox-content button.fancybox-close-small {
+  display: none;
+}
+
+.policy-title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.policy-text {
+  margin-bottom: 15px;
+}
+
+.policy ul {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.policy ul li::after {
+  color: #0066FF;
+  font-size: 14px;
+  top: -1px;
+}
+
 .alertify-notifier .ajs-message.ajs-warning {
   background: white;
   -webkit-box-shadow: 0 0 3px #333333;
