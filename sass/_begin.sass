@@ -177,20 +177,23 @@
                     position: absolute
                     content: ''
                     display: block
-                    width: 0
-                    height: 0
+                    width: 40px
+                    height: 40px
                     background-color: $yellow
-                    left: -12.5px
+                    left: -10px
                     top: 50%
-                    transform: translateY(-50%)
+                    transform: translateY(-50%) scale(0)
                     border-radius: 100%
+                    animation-duration: .2s
+                    animation-timing-function: linear
+                    animation-fill-mode: forwards
+                    animation-iteration-count: 1
             &-input
                 opacity: 0
                 position: absolute
                 z-index: -1
                 &:checked + .begin-quiz__item-text::before
-                    width: 45px
-                    height: 45px
+                    animation-name: drop
         &__controls
             display: flex
             justify-content: space-between
@@ -268,3 +271,12 @@
             &:hover
                 .begin-quiz__reset-text
                     margin-left: 20px
+
+
+@keyframes drop
+    0%
+        transform: translateY(-50%) scale(0)
+    80%
+        transform: translateY(-50%) scale(1.125)
+    100%
+        transform: translateY(-50%) scale(1)

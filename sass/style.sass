@@ -228,6 +228,13 @@ ul
             font-family: 'Stolzl', sans-serif
             font-size: 20px
             color: #ffffff
+    &_modal
+        padding: 18px 10px 18px 0
+        font-size: 18px
+        &::-webkit-input-placeholder
+            font-size: 18px
+        &:-moz-placeholder
+            font-size: 18px
     
 .submit
     width: 240px
@@ -273,6 +280,9 @@ ul
             transform: translate(-50%, -50%) scale(.85)
     input
         display: none
+    &_modal
+        width: 210px
+        height: 210px
     
 
 .section
@@ -302,6 +312,7 @@ ul
 @import ./_team.sass
 @import ./_app.sass
 @import ./_footer.sass
+@import ./_modal.sass
 
 
 .alertify-notifier .ajs-message.ajs-warning
