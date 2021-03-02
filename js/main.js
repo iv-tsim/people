@@ -327,6 +327,16 @@ $(document).ready(function() {
 
             }
 
+            if (target.closest('.footer-btn_feedback')) {
+
+                event.preventDefault();
+
+                document.querySelector('#feedback').scrollIntoView({block: "start", behavior: "smooth"});
+
+                show(1, tabsTop, tabsBodies);
+
+            }
+
         });
 
         if (document.querySelector('div#map')) {
