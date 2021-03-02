@@ -124,8 +124,6 @@ $(document).ready(function() {
 
         }
 
-        console.log(quizData);
-
         function resetQuiz() {
 
             quizIndex = 0;
@@ -191,13 +189,35 @@ $(document).ready(function() {
 
             let currentItemTitle = quizBodies[quizIndex].querySelector('.begin-quiz__title').textContent.trim();
 
-            if (!quizBodies[quizIndex].querySelector('.begin-quiz__item-input:checked')) {
+            let answer, input, inputParent;
+
+            input = quizBodies[quizIndex].querySelector('.begin-quiz__item-input:checked');
+            
+            if (!input) {
+                
+                return;
+                
+            }
+            
+            inputParent = input.closest('.begin-quiz__item');
+
+            if (!inputParent.classList.contains('begin-quiz__item_special')) {
+
+                answer = input.value;
+
+            } else {
+
+                answer = inputParent.querySelector('.begin-quiz__item-special').value;
+
+            }
+
+            if (answer === '') {
 
                 return;
 
             }
 
-            let answer = quizBodies[quizIndex].querySelector('.begin-quiz__item-input:checked').value;
+            console.log(answer);
 
             quizData['quiz' + quizIndex].question = currentItemTitle;
             quizData['quiz' + quizIndex].answer = answer;
@@ -223,6 +243,16 @@ $(document).ready(function() {
 
             quizBarItems[quizMaxIndex - quizIndex].classList.add('active');
             quizBodies[quizIndex].classList.add('active');
+
+        }
+
+        function hideQuizSpecialItems() {
+
+            quizBodies[quizIndex].querySelectorAll('.begin-quiz__item-special').forEach(function(item) {
+
+                item.classList.remove('active');
+
+            });
 
         }
 
@@ -264,6 +294,21 @@ $(document).ready(function() {
                 }
 
             }
+
+            if (target.closest('.begin-quiz__item')) {
+
+                hideQuizSpecialItems();
+
+            }
+            
+            if (target.closest('.begin-quiz__item_special')) {
+
+                hideQuizSpecialItems();
+
+                target.closest('.begin-quiz__item_special').querySelector('.begin-quiz__item-special').classList.add('active');
+
+            }
+
 
         });
 
