@@ -10,6 +10,7 @@
         font-size: 40px
         font-weight: 500
         line-height: 125%
+        margin-right: 20px
     &-number
         position: relative
         margin-right: 140px
@@ -30,3 +31,67 @@
             span
                 &:last-child
                     margin-right: -75px
+
+@media (max-width: 1500px)
+    .strategy
+        &-title
+            font-size: 36px
+        &-number
+            margin-right: 100px
+            &__number
+                font-size: 370px
+            &__text
+                font-size: 60px
+                bottom: 30px
+                span:last-child
+                    margin-right: -50px
+
+@media (max-width: 1300px)
+    .strategy
+        padding: 20px 0
+        &-title
+            font-size: 30px
+        &-number
+            margin-right: 80px
+            &__number
+                font-size: 330px
+            &__text
+                font-size: 50px
+                bottom: 30px
+                span:last-child
+                    margin-right: -30px
+
+@media (max-width: 900px)
+    .strategy
+        padding: 15px 0
+        &-title
+            font-size: 26px
+        &-number
+            margin-right: 50px
+            &__number
+                font-size: 280px
+            &__text
+                font-size: 45px
+                bottom: 30px
+                span:last-child
+                    margin-right: -20px
+
+@media (max-width: 700px)
+    .strategy
+        &-container
+            flex-direction: column
+        &-title
+            font-size: 24px
+            margin-right: 0
+            text-align: center
+            margin-bottom: 20px
+        &-number
+            margin-right: 0
+            &__number
+                font-size: 200px
+            &__text
+                font-size: 30px
+                bottom: 20px
+                right: 10px
+                span:last-child
+                    margin-right: -20px
