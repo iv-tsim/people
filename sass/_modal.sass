@@ -117,13 +117,13 @@
     background: #fff
     font-size: 16px
     color: #000
+    padding: 40px 20px
     &-wrapper
         display: none
         width: 1000px
         max-width: 90%
     &-wrapper.fancybox-content
-        padding: 30px 20px
-        background: #fff
+        padding: 0
         button.fancybox-close-small
             display: none
     &-title
@@ -139,3 +139,33 @@
             color: $blue
             font-size: 14px
             top: -1px
+
+@media (max-width: 800px)
+    .modal
+        padding: 40px 20px 80px 20px
+        &-title
+            font-size: 20px
+            margin-bottom: 15px
+        &-input
+            margin-bottom: 15px
+        &-career
+            padding: 40px 20px 20px 20px
+        &-toTop
+            margin-top: 30px
+        &-item
+            padding: 12px 0
+            &__body
+                padding-top: 15px
+                padding-bottom: 20px
+                &-title
+                    margin-bottom: 15px
+                ul
+                    margin-bottom: 15px
+    .policy
+        padding: 30px 15px
+        &-title
+            font-size: 20px
+            margin-bottom: 20px
+        ul
+            li
+                padding-left: 15px
