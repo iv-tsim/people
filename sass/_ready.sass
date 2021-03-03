@@ -13,26 +13,21 @@
         display: flex
         align-items: flex-start
         justify-content: space-between
-    // &-list
-    //     flex-basis: 58.33%
-    //     display: flex
-    //     justify-content: space-between
-    //     align-items: flex-start
-    //     width: calc(58.33% + 120px)
-    //     margin-left: -60px
-    //     z-index: 2
-    //     position: relative
-    //     &__item
-    //         margin: 0 60px
-    //         &:last-child
-    //             margin-top: 140px
     &-list
-        display: grid
-        position: relative
-        z-index: 2
-        grid-template-columns: repeat(2, 1fr)
         flex-basis: 58.33%
-        grid-column-gap: 120px
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        width: calc(58.33% + 120px)
+        margin-left: -60px
+        z-index: 2
+        position: relative
+        &__item
+            margin: 0 60px
+            &:last-child
+                margin-top: 140px
+        &_mobile
+            display: none
     &-item
         margin-bottom: 120px
         &__title
@@ -44,20 +39,6 @@
                 color: $yellow
         &__text
             line-height: 150%
-        &:nth-child(even)
-            margin-top: 140px
-            margin-bottom: 0
-    // &-item
-    //     margin-bottom: 120px
-    //     &__title
-    //         font-size: 40px
-    //         font-weight: 500
-    //         margin-bottom: 30px
-    //         span
-    //             font-size: 20px
-    //             color: $yellow
-    //     &__text
-    //         line-height: 150%
     &-right
         flex-basis: 30%
         position: sticky
@@ -90,3 +71,98 @@
         right: 0
         bottom: 0
         position: absolute
+
+@media (max-width: 1670px)
+    .ready
+        padding-top: 140px
+        padding-bottom: 100px
+        &-subtitle
+            margin-bottom: 140px
+        &-list
+            flex-basis: 65%
+            width: calc(65% + 120px)
+
+@media (max-width: 1400px)
+    .ready
+        padding-top: 110px
+        padding-bottom: 80px
+        &-subtitle
+            margin-bottom: 100px
+        &-list
+            width: calc(65% + 70px)
+            margin-left: -35px
+            &__item
+                margin: 0 35px
+                &:last-child
+                    margin-top: 90px
+        &-item
+            margin-bottom: 90px
+
+@media (max-width: 1200px)
+    .ready
+        padding: 70px 0
+        &-main
+            flex-direction: column-reverse
+        &-right
+            position: static
+            margin-bottom: 50px
+            &__img
+                display: none
+            &__caption
+                margin-bottom: 15px
+                &_big
+                    font-size: 24px
+            &__title
+                margin-bottom: 20px
+            &__text
+                margin-bottom: 30px
+            &__profit
+                font-size: 28px
+        &-list
+            display: none
+            &_mobile
+                display: flex
+                width: calc(100% + 30px)
+                margin-left: -15px
+                flex-wrap: wrap
+        &-item
+            flex-basis: 300px
+            flex-grow: 1
+            margin: 0 15px 30px 15px
+            &__title
+                font-size: 32px
+                margin-bottom: 20px
+        &-dec
+            display: none
+        &-dec2
+            display: none
+        &-title
+            margin-bottom: 30px
+        &-subtitle
+            margin-bottom: 50px
+
+@media (max-width: 800px)
+    .ready
+        padding: 40px 0
+        &-subtitle
+            margin-bottom: 30px
+        &-item
+            &__title
+                font-size: 24px
+                margin-bottom: 15px
+
+@media (max-height: 830px) and (min-height: 700px)
+    .ready
+        &-right
+            &__caption
+                margin-bottom: 20px
+                &_big
+                    font-size: 26px
+            &__title
+                margin-bottom: 30px
+            &__text
+                margin-bottom: 40px
+            &__img
+                margin-bottom: 30px
+            &__profit
+                font-size: 32px
