@@ -437,41 +437,84 @@ $(document).ready(function() {
 
         });
 
-        if (document.querySelector('div#map')) {
-            ymaps.ready(function () {
-                var myMap = new ymaps.Map('map', {
-                    center: [59.21554026682815,39.913141780425995],
-                    zoom: 16
+        if (window.innerWidth > 1200) {
+
+            if (document.querySelector('div#map')) {
+                ymaps.ready(function () {
+                    var myMap = new ymaps.Map('map', {
+                        center: [59.21404026682815,39.913141780425995],
+                        zoom: 16
+                    });
+                    
+                    var myPlacemark = new ymaps.Placemark([59.21203606509942,39.91277699999998], {
+                        hintContent: 'г. Вологда, ул. Машиностроительная, д. 19, оф. 239',
+                        balloonContent: 'г. Вологда, ул. Машиностроительная, д. 19, оф. 239'
+                    },
+                    {
+                        preset: 'islands#redIcon',
+                        iconLayout: 'default#image',
+                        iconImageHref: './img/general/mark.svg',
+                        iconImageSize: [20, 20],
+                        iconImageOffset: [-10, -10]
+                    });
+        
+                    myMap.geoObjects.add(myPlacemark);
+        
+                    myMap.controls
+                        .remove('geolocationControl')
+                        .remove('fullscreenControl')
+                        .remove('typeSelector')
+                        .remove('searchControl')
+                        .remove('trafficControl')
+                        .remove('rulerControl')
+                        .remove('zoomControl');
+        
+                    myMap.behaviors.disable([
+                        'scrollZoom',
+                        'dblClickZoom'
+                    ]);
                 });
-                
-                var myPlacemark = new ymaps.Placemark([59.21203606509942,39.91277699999998], {
-                    hintContent: '140056, Россия, Москва, ул. Смоленская, д. 47/б, оф. 289, м. Смоленская',
-                    balloonContent: '140056, Россия, Москва, ул. Смоленская, д. 47/б, оф. 289, м. Смоленская'
-                },
-                {
-                    preset: 'islands#redIcon',
-                    iconLayout: 'default#image',
-                    iconImageHref: './img/general/mark.svg',
-                    iconImageSize: [20, 20],
-                    iconImageOffset: [-10, -10]
+            }
+
+        } else {
+
+            if (document.querySelector('div#mapMobile')) {
+                ymaps.ready(function () {
+                    var myMap = new ymaps.Map('mapMobile', {
+                        center: [59.21404026682815,39.913141780425995],
+                        zoom: 16
+                    });
+                    
+                    var myPlacemark = new ymaps.Placemark([59.21203606509942,39.91277699999998], {
+                        hintContent: 'г. Вологда, ул. Машиностроительная, д. 19, оф. 239',
+                        balloonContent: 'г. Вологда, ул. Машиностроительная, д. 19, оф. 239'
+                    },
+                    {
+                        preset: 'islands#redIcon',
+                        iconLayout: 'default#image',
+                        iconImageHref: './img/general/mark.svg',
+                        iconImageSize: [20, 20],
+                        iconImageOffset: [-10, -10]
+                    });
+        
+                    myMap.geoObjects.add(myPlacemark);
+        
+                    myMap.controls
+                        .remove('geolocationControl')
+                        .remove('fullscreenControl')
+                        .remove('typeSelector')
+                        .remove('searchControl')
+                        .remove('trafficControl')
+                        .remove('rulerControl')
+                        .remove('zoomControl');
+        
+                    myMap.behaviors.disable([
+                        'scrollZoom',
+                        'dblClickZoom'
+                    ]);
                 });
-    
-                myMap.geoObjects.add(myPlacemark);
-    
-                myMap.controls
-                    .remove('geolocationControl')
-                    .remove('fullscreenControl')
-                    .remove('typeSelector')
-                    .remove('searchControl')
-                    .remove('trafficControl')
-                    .remove('rulerControl')
-                    .remove('zoomControl');
-    
-                myMap.behaviors.disable([
-                    'scrollZoom',
-                    'dblClickZoom'
-                ]);
-            });
+            }
+
         }
 
     });
