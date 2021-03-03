@@ -135,7 +135,56 @@ $(document).ready(function() {
             freeMode: true,
             observer: true,
             observeParents: true,
-            touchEventsTarget: 'wrapper'
+            touchEventsTarget: 'wrapper',
+            breakpoints: {
+
+                1300: {
+
+                    slidesPerView: 11
+
+                },
+                1200: {
+
+                    slidesPerView: 10
+
+                },
+                1100: {
+
+                    slidesPerView: 9
+
+                },
+                1000: {
+
+                    slidesPerView: 8
+
+                },
+                900: {
+
+                    slidesPerView: 7
+
+                },
+                650: {
+
+                    slidesPerView: 6
+
+                },
+                500: {
+
+                    slidesPerView: 5
+
+                },
+                390: {
+
+                    slidesPerView: 4
+
+                },
+                0: {
+
+                    slidesPerView: 3
+
+                }
+
+            }
 
         });
 
