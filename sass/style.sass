@@ -177,11 +177,9 @@ ul
     background-color: transparent
     &::-webkit-input-placeholder
         font-family: 'Stolzl', sans-serif
-        font-size: 30px
         color: #000000
     &:-moz-placeholder
         font-family: 'Stolzl', sans-serif
-        font-size: 30px
         color: #000000
     &:hover, &:focus
         border-color: $yellow
@@ -194,19 +192,13 @@ ul
         transition: .3s border-color
         &::-webkit-input-placeholder
             font-family: 'Stolzl', sans-serif
-            font-size: 20px
             color: #ffffff
         &:-moz-placeholder
             font-family: 'Stolzl', sans-serif
-            font-size: 20px
             color: #ffffff
     &_modal
         padding: 18px 10px 18px 0
         font-size: 18px
-        &::-webkit-input-placeholder
-            font-size: 18px
-        &:-moz-placeholder
-            font-size: 18px
     
 .submit
     width: 240px
@@ -341,6 +333,14 @@ ul
         &:hover
             .arrow-text
                 margin-left: 80px
+    .submit
+        width: 210px
+        height: 210px
+    .input
+        border-width: 3px
+        padding-bottom: 30px
+        padding-right: 10px
+        font-size: 24px
 
 @media (max-width: 1100px)
     .section
@@ -348,6 +348,17 @@ ul
             font-size: 40px
         &-subtitle
             font-size: 22px
+
+@media (max-width: 1000px)
+    .submit
+        width: 190px
+        height: 190px
+        font-size: 18px
+    .input
+        border-width: 3px
+        padding-bottom: 20px
+        padding-right: 10px
+        font-size: 22px
 
 @media (max-width: 900px)
     .section
@@ -362,6 +373,15 @@ ul
             padding: 14px 20px
         &_white
             padding: 12px 15px
+    .submit
+        width: 160px
+        height: 160px
+        font-size: 16px
+    .input
+        border-width: 3px
+        padding-bottom: 15px
+        padding-right: 10px
+        font-size: 20px
         
 @media (max-width: 600px)
     .section
