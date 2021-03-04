@@ -28,6 +28,7 @@
     <meta name="msapplication-square310x310logo" content="./img/general/favicon/mstile-310x310.png" />
 
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./css/alertify.min.css">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -462,7 +463,7 @@
                                         <div class="begin-quiz__reset-text">Пройти еще раз</div>
                                     </div>
                                 </div>
-                                <div class="begin-quiz__controls">
+                                <div class="begin-quiz__controls active">
                                     <div class="begin-quiz__prev hidden">
                                         <img src="./img/begin/arrow.svg" alt="arrow" class="begin-quiz__prev-img">
                                         <div class="begin-quiz__prev-text">Назад</div>
@@ -819,11 +820,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="feedback-slider__arrow feedback-slider__arrow_prev feedback-slider__arrow_comment">
-                                <img src="./img/feedback/arrow_prev.svg" alt="arrow" class="feedback-slider__arrow-img">
-                            </div>
-                            <div class="feedback-slider__arrow feedback-slider__arrow_next feedback-slider__arrow_comment">
-                                <img src="./img/feedback/arrow_next.svg" alt="arrow" class="feedback-slider__arrow-img">
+                            <div class="feedback-slider__arrows">
+                                <div class="feedback-slider__arrow feedback-slider__arrow_prev feedback-slider__arrow_result">
+                                    <img src="./img/feedback/arrow_prev.svg" alt="arrow" class="feedback-slider__arrow-img">
+                                </div>
+                                <div class="feedback-slider__arrow feedback-slider__arrow_next feedback-slider__arrow_result">
+                                    <img src="./img/feedback/arrow_next.svg" alt="arrow" class="feedback-slider__arrow-img">
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-container feedback-thumbs feedback-thumbs_comment">
@@ -1072,8 +1075,8 @@
                             <input type="submit">
                         </label>
                     </div>
-                    <img src="./img/app/1.png" alt="1" class="app-img">
                 </div>
+                <img src="./img/app/1.png" alt="1" class="app-img">
             </section>
         </div>
         <footer class="footer">
@@ -1157,6 +1160,7 @@
                         </a>
                     </div>
                 </div>
+                <img src="./img/general/cross.svg" alt="cross" class="team-modal__close" data-fancybox-close>
             </div>
         </div>
         <div class="modal" id="modal-phone">
@@ -1282,6 +1286,7 @@
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/alertify.min.js"></script>
     <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/jquery.maskedinput.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>

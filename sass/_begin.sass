@@ -195,9 +195,11 @@
                 &:checked + .begin-quiz__item-text::before
                     animation-name: drop
         &__controls
-            display: flex
             justify-content: space-between
             align-items: flex-start
+            display: none
+        &__controls.active
+            display: flex
         &__prev
             cursor: pointer
             display: flex
@@ -252,10 +254,11 @@
                 line-height: 140%
                 margin-bottom: 40px
             &-input
-                width: 100%
+                display: block
                 margin-bottom: 40px
-                &:last-child
-                    margin-bottom: 0
+                width: 100%
+            input[type="submit"], #quizData
+                display: none
         &__final
             display: none
         &__final.active

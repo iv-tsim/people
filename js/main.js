@@ -1,21 +1,3 @@
-$(document).ready(function() {
-
-    $('input[type=tel]').mask("+7 (999) 999-99-99");
-
-    $(document).on("click", ".modal-item__top", function(){
-        var siblings_this = $(this).siblings(".modal-item__body"); 
-        var this_custom   = $(this); 
-        if (this_custom.hasClass("active")) {
-          siblings_this.stop().slideUp();
-          this_custom.removeClass("active");
-        }else{
-          siblings_this.stop().slideDown();
-          this_custom.addClass("active");
-        }
-      });
-
-});
-
 (function() {
     
     document.addEventListener('DOMContentLoaded', function() {
@@ -212,27 +194,15 @@ $(document).ready(function() {
         const quizBarItems = document.querySelectorAll('.begin-quiz__bar-item');
         const quizBodies = document.querySelectorAll('.begin-quiz__body');
         const quizInputs = document.querySelectorAll('.begin-quiz__item-input');
+        const quizControls = document.querySelector('.begin-quiz__controls');
         const quizPrev = document.querySelector('.begin-quiz__prev');
         const quizNext = document.querySelector('.begin-quiz__next');
         const quizNextBtn = document.querySelector('.begin-quiz__next_btn');
+        const quizDataInput = document.querySelector('#quizData');
+        const quizFinal = document.querySelector('.begin-quiz__final');
 
-        let quizData = {};
         let quizIndex = 0;
         let quizMaxIndex = quizBodies.length - 1;
-
-        for (let i = 0; i <= quizMaxIndex; i++) {
-
-            if (i === quizMaxIndex) {
-
-                quizData.form = new Object();
-
-                break;
-
-            }
-
-            quizData['quiz' + i] = new Object();
-
-        }
 
         function resetQuiz() {
 
@@ -246,7 +216,13 @@ $(document).ready(function() {
 
             });
 
-            quizData = {};
+            quizBarItems[quizMaxIndex].classList.add('active');
+            quizFinal.classList.remove('active');
+            quizBodies[quizIndex].classList.add('active');
+            quizControls.classList.add('active');
+            quizPrev.classList.add('hidden');
+            quizNext.classList.remove('hidden');
+            quizNextBtn.classList.add('hidden')
 
         }
 
@@ -282,8 +258,6 @@ $(document).ready(function() {
 
                 quizNext.classList.add('hidden');
                 quizNextBtn.classList.remove('hidden')
-
-                console.log(quizData);
 
             } else {
 
@@ -327,10 +301,7 @@ $(document).ready(function() {
 
             }
 
-            console.log(answer);
-
-            quizData['quiz' + quizIndex].question = currentItemTitle;
-            quizData['quiz' + quizIndex].answer = answer;
+            quizDataInput.value += 'Вопрос: ' + currentItemTitle + '\nОтвет: ' + answer + '\n \n';
 
             hideQuiz();
 
@@ -365,6 +336,33 @@ $(document).ready(function() {
             });
 
         }
+
+        document.addEventListener('wpcf7mailsent', function( event ) {
+
+            if (event.detail.contactFormId != 9) {
+        
+                alertify.success(event.detail.apiResponse.message);
+                
+            } else {
+
+                hideQuiz();
+
+                quizControls.classList.remove('active');
+
+    
+                quizFinal.classList.add('active');
+    
+            }
+            
+        }, false);
+    
+        document.addEventListener('wpcf7invalid', function( event ) {
+            alertify.warning(event.detail.apiResponse.message);
+        }, false);
+    
+        document.addEventListener('wpcf7mailfailed', function( event ) {
+            alertify.error(event.detail.apiResponse.message);
+        }, false);
 
         document.addEventListener('click', function(event) {
 
@@ -432,6 +430,18 @@ $(document).ready(function() {
                 document.querySelector('#feedback').scrollIntoView({block: "start", behavior: "smooth"});
 
                 show(1, tabsTop, tabsBodies);
+
+            }
+
+            if (target.closest('.begin-quiz__next_btn')) {
+
+                document.querySelector('.quiz-hiddenSubmit').click();
+
+            }
+
+            if (target.closest('.begin-quiz__reset')) {
+
+                resetQuiz();
 
             }
 
@@ -520,3 +530,31 @@ $(document).ready(function() {
     });
 
 })();
+
+$(document).ready(function() {
+
+    $('input[type=tel]').mask("+7 (999) 999-99-99");
+
+    alertify.set('notifier', 'position', 'bottom-right');
+    alertify.set('notifier', 'delay', 10);
+
+    $(document).on('click', '.wpcf7-submit', function(e){
+        if( $('.ajax-loader').hasClass('is-active') ) {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    $(document).on("click", ".modal-item__top", function(){
+        var siblings_this = $(this).siblings(".modal-item__body"); 
+        var this_custom   = $(this); 
+        if (this_custom.hasClass("active")) {
+          siblings_this.stop().slideUp();
+          this_custom.removeClass("active");
+        }else{
+          siblings_this.stop().slideDown();
+          this_custom.addClass("active");
+        }
+    });
+
+});

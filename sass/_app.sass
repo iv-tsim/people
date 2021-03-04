@@ -9,11 +9,15 @@
     &-img
         width: 100%
     &-form
-        margin-bottom: 90px
-        display: flex
-        align-items: center
+        form
+            margin-bottom: 90px
+            display: flex
+            align-items: center
+        span
+            margin-right: 50px
         &__input
-            width: 500px
+            width: 100%
+            max-width: 500px
             margin-right: 50px
         &__submit
             margin-left: 50px
@@ -24,7 +28,8 @@
         &-subtitle
             margin-bottom: 140px
         &-form
-            margin-bottom: 70px
+            form
+                margin-bottom: 70px
 
 @media (max-width: 1400px)
     .app
@@ -32,12 +37,15 @@
         &-subtitle
             margin-bottom: 100px
         &-form
-            margin-bottom: 50px
+            form
+                margin-bottom: 50px
 
 @media (max-width: 1300px)
     .app
         padding-top: 90px
         &-form
+            span
+                margin-right: 30px
             &__submit
                 margin-left: 30px
             &__input
@@ -49,11 +57,14 @@
         &-subtitle
             margin-bottom: 70px
         &-form
-            flex-direction: column
+            form
+                flex-direction: column
+                span
+                    margin-right: 0
             &__input
                 margin-right: 0
                 margin-bottom: 30px
-                max-width: 100%
+                width: 100%
             &__submit
                 margin-left: 0
 
@@ -65,4 +76,5 @@
         &-title
             margin-bottom: 20px
         &-form
-            margin-bottom: 30px
+            form
+                margin-bottom: 30px

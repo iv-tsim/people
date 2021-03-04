@@ -424,15 +424,25 @@ ul
 @import ./_modal.sass
 
 
+.wpcf7-not-valid
+    border-color: #f34f41 !important
+
 .alertify-notifier .ajs-message.ajs-warning
-    background: white
+    background: #f34f41
+    color: #fff
     -webkit-box-shadow: 0 0 3px #333333
     box-shadow: 0 0 3px #333333
 
 .alertify-notifier .ajs-message.ajs-success
     color: #fff
-    background: rgba(40, 136, 62, 0.9)
+    background: $blue
     text-shadow: 0 0 1px rgba(0,0,0,.5)
 
 .alertify-notifier
     z-index: 99998
+    font-family: 'Stolzl', sans-serif
+    font-size: 16px
+    font-weight: 400
+
+div.wpcf7 .ajax-loader, .wpcf7-not-valid-tip, .wpcf7-response-output
+    display: none !important
