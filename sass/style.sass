@@ -160,9 +160,10 @@ ul
             content: '◌'
             color: $yellow
             display: block
-            top: -4px
+            top: 3px
             left: 0
             font-size: 24px
+            line-height: 16px
         &:last-child
             margin-bottom: 0
 
@@ -323,6 +324,10 @@ ul
             font-size: 44px
     body
         font-size: 18px
+    ul
+        li
+            &::after
+                top: 1px
     .arrow
         &-circle
             width: 80px
