@@ -226,7 +226,6 @@
                 max-width: 100%
             &__subtitle
                 max-width: 100%
-
         &-main
             width: 70%
             margin: 0 auto
@@ -248,6 +247,9 @@
     .hero
         &-list
             flex-direction: column
+        &-text
+            &__subtitle
+                font-size: 26px
         &-item
             &__title
                 max-width: 100%
@@ -268,11 +270,22 @@
 
 @media (max-width: 900px)
     .hero
+        padding-top: 40px
         &-main
             width: 80%
             margin-bottom: 30px
         &-video
             width: 75%
+        &-text
+            &__subtitle
+                font-size: 24px
+        &-item
+            &__img
+                max-width: 60px
+            &__main
+                padding: 20px
+            &__title
+                font-size: 20px
 
 @media (max-width: 700px)
     .hero
@@ -283,10 +296,16 @@
 
 @media (max-width: 600px)
     .hero
+        padding-top: 30px
         &-main
             width: 100%
         &-video
             width: 85%
+        &-text
+            &__title
+                margin-bottom: 20px
+            &__subtitle
+                font-size: 22px
 
 @media (max-width: 550px)
     .hero
@@ -301,7 +320,14 @@
         &-video
             &__text
                 bottom: -95%
-
+        &-item
+            &_special
+                &__img
+                    left: 70px
+                .hero-item__subtitle
+                    font-size: 16px
+                    margin-top: 10px
+                    
 @media (max-width: 350px)
     .hero
         &-video
