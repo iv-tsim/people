@@ -29,6 +29,7 @@
             display: flex
             align-items: center
             justify-content: center
+            border-radius: 60px
             &:hover
                 border-color: $blue
                 background-color: $blue
@@ -51,6 +52,7 @@
             cursor: pointer
             position: relative
             display: flex
+            transition: .3s margin
             &::before
                 position: absolute
                 display: block
@@ -63,9 +65,13 @@
             &_next
                 &::before
                     right: 95%
+                &:hover
+                    margin-right: -15px
             &_prev
                 &::before
                     left: 95%
+                &:hover
+                    margin-left: -15px
         &__arrows
             position: absolute
             top: 50%
@@ -258,6 +264,12 @@
                     margin: 0
                 &::before
                     width: 0
+                &_prev
+                    &:hover
+                        margin-left: 0
+                &_next
+                    &:hover
+                        margin-right: 0
         &-slide
             &__img
                 margin-right: 50px

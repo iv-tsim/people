@@ -32,11 +32,8 @@
             slidesPerView: 11,
             slidesPerGroup: 1,
             centerInsufficientSlides: true,
-            freeMode: true,
-            loop: true,
             observer: true,
             observeParents: true,
-            loop: true,
             touchEventsTarget: 'wrapper',
             breakpoints: {
 
@@ -116,9 +113,7 @@
             slidesPerView: 11,
             slidesPerGroup: 1,
             centerInsufficientSlides: true,
-            freeMode: true,
             observer: true,
-            loop: true,
             observeParents: true,
             touchEventsTarget: 'wrapper',
             breakpoints: {
