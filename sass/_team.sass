@@ -219,6 +219,19 @@
         &-list
             grid-column-gap: 20px
             grid-row-gap: 20px
+            position: relative
+        &-item
+            order: 1
+            grid-column: span 6
+            &:nth-child(2)
+                grid-column: span 12
+                order: 0
+                max-width: 70%
+                position: relative
+                left: 50%
+                transform: translateX(-50%)
+            &:nth-child(n + 4)
+                grid-column: span 6
 
 @media (max-width: 750px)
     .team
@@ -246,3 +259,6 @@
         &-list
             grid-column-gap: 15px
             grid-row-gap: 15px
+        &-item
+            &:nth-child(2)
+                max-width: 100%

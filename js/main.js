@@ -25,16 +25,36 @@
 
         }
 
+        function checkSlides(slidesPerView, slidesAmount) {
+
+            let center, loop;
+
+            if (slidesAmount >= slidesPerView) {
+
+                center = false;
+                loop = true;
+
+            } else {
+
+                center = true;
+                loop = false;
+
+            }
+
+            return {loop: loop, center: center};
+
+        }
+
         let feedbackThumbsResult = new Swiper('.feedback-thumbs_result', {
 
             speed: 600,
             spaceBetween: 3,
             slidesPerView: 11,
             slidesPerGroup: 1,
-            centerInsufficientSlides: true,
             observer: true,
             observeParents: true,
             touchEventsTarget: 'wrapper',
+            init: false,
             breakpoints: {
 
                 1300: {
@@ -86,6 +106,78 @@
             }
 
         });
+
+        feedbackThumbsResult.params.loop = checkSlides(feedbackThumbsResult.params.slidesPerView, feedbackThumbsResult.slides.length).loop;
+        feedbackThumbsResult.params.centerInsufficientSlides = checkSlides(feedbackThumbsResult.params.slidesPerView, feedbackThumbsResult.slides.length).center;
+
+        feedbackThumbsResult.init();
+
+        let feedbackThumbsComment = new Swiper('.feedback-thumbs_comment', {
+
+            speed: 600,
+            spaceBetween: 3,
+            slidesPerView: 11,
+            slidesPerGroup: 1,
+            observer: true,
+            observeParents: true,
+            touchEventsTarget: 'wrapper',
+            init: false,
+            breakpoints: {
+
+                1300: {
+
+                    slidesPerView: 11
+
+                },
+                1200: {
+
+                    slidesPerView: 10
+
+                },
+                1100: {
+
+                    slidesPerView: 9
+
+                },
+                1000: {
+
+                    slidesPerView: 8
+
+                },
+                900: {
+
+                    slidesPerView: 7
+
+                },
+                650: {
+
+                    slidesPerView: 6
+
+                },
+                500: {
+
+                    slidesPerView: 5
+
+                },
+                390: {
+
+                    slidesPerView: 4
+
+                },
+                0: {
+
+                    slidesPerView: 3
+
+                }
+
+            }
+
+        });
+
+        feedbackThumbsComment.params.loop = checkSlides(feedbackThumbsComment.params.slidesPerView, feedbackThumbsComment.slides.length).loop;
+        feedbackThumbsComment.params.centerInsufficientSlides = checkSlides(feedbackThumbsComment.params.slidesPerView, feedbackThumbsComment.slides.length).center;
+
+        feedbackThumbsComment.init();
 
         let feedbackSliderResult = new Swiper('.feedback-slider_result', {
 
@@ -102,68 +194,6 @@
             },
             thumbs: {
                 swiper: feedbackThumbsResult
-            }
-
-        });
-
-        let feedbackThumbsComment = new Swiper('.feedback-thumbs_comment', {
-
-            speed: 600,
-            spaceBetween: 3,
-            slidesPerView: 11,
-            slidesPerGroup: 1,
-            centerInsufficientSlides: true,
-            observer: true,
-            observeParents: true,
-            touchEventsTarget: 'wrapper',
-            breakpoints: {
-
-                1300: {
-
-                    slidesPerView: 11
-
-                },
-                1200: {
-
-                    slidesPerView: 10
-
-                },
-                1100: {
-
-                    slidesPerView: 9
-
-                },
-                1000: {
-
-                    slidesPerView: 8
-
-                },
-                900: {
-
-                    slidesPerView: 7
-
-                },
-                650: {
-
-                    slidesPerView: 6
-
-                },
-                500: {
-
-                    slidesPerView: 5
-
-                },
-                390: {
-
-                    slidesPerView: 4
-
-                },
-                0: {
-
-                    slidesPerView: 3
-
-                }
-
             }
 
         });

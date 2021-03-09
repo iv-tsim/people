@@ -267,33 +267,46 @@ ul
             color: #000
 
 .btn
-    font-weight: 500
-    text-transform: uppercase
-    color: #fff
-    padding: 20px 40px
-    border: 2px solid #fff
-    transition: .3s border-color, .3s color
-    text-align: center
-    border-radius: 60px
-    &:hover
-        border-color: $yellow
-    &_filled
-        color: #fff
-        border: none
-        padding: 22px 70px
+    position: relative
+    display: flex
+    &-text
+        width: 100%
+        top: 0
         background-color: $blue
-        transition: .3s background-color, .3s color
-        &:hover
-            color: #000
-            background-color: $yellow
+        position: relative
+        z-index: 1
+        padding: 22px 40px
+        text-align: center
+        border-radius: 60px
+        font-weight: 500
+        text-transform: uppercase
+        color: #fff
+    &::before
+        position: absolute
+        display: block
+        content: ''
+        bottom: -4px
+        left: -2px
+        width: 100%
+        height: 100%
+        background-color: $darkBlue
+        border-radius: 60px
+        z-index: 0
+    &:active
+        .btn-text
+            top: 4px
+    &_filled
+        .btn-text
+            background-color: $red
+        &::before
+            background-color: $darkRed
     &_white
-        color: #000
-        padding: 23px 45px
-        background-color: #fff
-        border: none
-        transition: .3s background-color
-        &:hover
-            background-color: $yellow
+        .btn-text
+            color: #000
+            padding: 23px 45px
+            background-color: #fff
+        &::before
+            background-color: darken(#fff, 20%)
 
 @media (max-width: 1670px)
     .section
@@ -304,12 +317,12 @@ ul
 
 @media (max-width: 1500px)
     .btn
-        padding: 16px 30px
-        font-size: 18px
-        &_filled
-            padding: 18px 50px
+        &-text
+            padding: 20px 30px
+            font-size: 18px
         &_white
-            padding: 16px 35px
+            .btn-text
+                padding: 20px 40px
 
 @media (max-width: 1400px)
     .section
@@ -372,12 +385,12 @@ ul
 
 @media (max-width: 800px)
     .btn
-        padding: 12px 15px
-        font-size: 16px
-        &_filled
+        &-text
             padding: 14px 20px
+            font-size: 16px
         &_white
-            padding: 15px 30px
+            .btn-text
+                padding: 14px 25px
     .submit
         width: 160px
         height: 160px
@@ -411,9 +424,11 @@ ul
             .arrow-text
                 margin-left: 70px
 
-@media (max-width: 360px)
+@media (max-width: 365px)
     .btn
-        font-size: 14px
+        &-text
+            font-size: 14px
+            padding: 12px 15px
 
 @import ./_header.sass
 @import ./_hero.sass

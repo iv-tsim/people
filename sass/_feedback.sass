@@ -89,14 +89,33 @@
             background-repeat: no-repeat
             background-position: center center
             background-size: cover
-            min-width: 315px
-            width: 315px
-            margin-right: 80px
+            margin-bottom: 15px
             &-inner
                 display: block
                 width: 100%
                 opacity: 0
                 visibility: hidden
+            &-wrapper
+                min-width: 315px
+                width: 315px
+                margin-right: 80px
+        &__socials
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            &-item
+                margin-right: 30px
+                max-width: 30px
+                display: flex
+                &:last-child
+                    margin-right: 0
+                svg
+                    fill: #000
+                    transition: .3s fill
+                    max-width: 100%
+                &:hover
+                    svg
+                        fill: $blue
         &__main
             width: 100%
             padding-bottom: 50px
@@ -139,9 +158,9 @@
             background-repeat: no-repeat
             background-position: center center
             background-size: cover
-            width: 146px
             cursor: pointer
             position: relative
+            margin-bottom: 6px
             &::after
                 content: ''
                 display: block
@@ -163,6 +182,10 @@
                 &::after
                     opacity: 1
                     visibility: visible
+            &-text
+                font-size: 9px
+            &-wrapper
+                width: 146px
         &__item.swiper-slide-thumb-active
             &::after
                 opacity: 1
@@ -185,7 +208,8 @@
                     width: 140px
         &-slide
             &__img
-                margin-right: 60px
+                &-wrapper
+                    margin-right: 60px
             &__title
                 font-size: 36px
                 margin-bottom: 30px
@@ -212,8 +236,6 @@
                 &::before
                     width: 80px
         &-slide
-            &__img
-                margin-right: 60px
             &__title
                 font-size: 36px
                 margin-bottom: 30px
@@ -272,7 +294,8 @@
                         margin-right: 0
         &-slide
             &__img
-                margin-right: 50px
+               &-wrapper
+                    margin-right: 50px
             &__title
                 font-size: 32px
                 margin-bottom: 25px
@@ -299,9 +322,10 @@
                 padding: 25px 40px
         &-slide
             &__img
-                margin-right: 40px
-                width: 280px
-                min-width: 280px
+                &-wrapper
+                    margin-right: 40px
+                    width: 280px
+                    min-width: 280px
             &__title
                 font-size: 26px
                 margin-bottom: 20px
@@ -323,9 +347,10 @@
                 padding: 20px 30px
         &-slide
             &__img
-                margin-right: 30px
-                width: 260px
-                min-width: 260px
+                &-wrapper
+                    margin-right: 30px
+                    width: 260px
+                    min-width: 260px
             &__title
                 font-size: 24px
                 margin-bottom: 15px
@@ -346,10 +371,15 @@
         &-slide
             flex-direction: column
             &__img
-                margin: 0 auto
-                margin-bottom: 20px
-                min-width: 0
-                width: 200px
+                margin-bottom: 10px
+                &-wrapper
+                    margin: 0 auto
+                    margin-bottom: 20px
+                    min-width: 0
+                    width: 240px
+            &__socials
+                &-item
+                    margin-right: 15px
             &__main
                 padding-bottom: 30px
         &-tabs
@@ -387,7 +417,8 @@
                 font-size: 16px
         &-slide
             &__img
-                width: 170px
+                &-wrapper
+                    width: 200px
         &-slide
             &__list
                 &-item

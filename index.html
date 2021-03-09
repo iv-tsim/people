@@ -44,8 +44,12 @@
                         <div class="header-logo__text">Продюсерский центр онлайн школ</div>
                     </div>
                     <div class="header-btns">
-                        <a href="#modal-phone" data-fancybox href="javascript:;" data-touch="false" class="btn header-btn">Пройти пробное тестирование</a>
-                        <a href="#modal-phone" data-fancybox href="javascript:;" data-touch="false" class="btn btn_filled header-btn">Перезвонить мне</a>
+                        <a href="#modal-phone" data-fancybox href="javascript:;" data-touch="false" class="btn header-btn">
+                            <div class="btn-text">Пройти пробное тестирование</div>
+                        </a>
+                        <a href="#modal-phone" data-fancybox href="javascript:;" data-touch="false" class="btn btn_filled header-btn">
+                            <div class="btn-text">Перезвонить мне</div>
+                        </a>
                     </div>
                 </div>
             </header>
@@ -99,7 +103,9 @@
                                 <h2 class="hero-item__title">Все расскажем</h2>
                                 <h3 class="hero-item__subtitle">и дадим пошаговое руководство по запуску онлайн-школы</h3>
                             </div>
-                            <a href="#modal-phone" data-fancybox href="javascript:;" data-touch="false" class="btn btn_white hero-item__btn">Узнать больше</a>
+                            <a href="#modal-phone" data-fancybox href="javascript:;" data-touch="false" class="btn btn_white hero-item__btn">
+                                <div class="btn-text">Узнать больше</div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -503,8 +509,24 @@
                             <div class="swiper-container feedback-slider feedback-slider_result">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide feedback-slide">
-                                        <div class="feedback-slide__img" style="background-image: url(./img/feedback/1.jpg);">
-                                            <img src="./img/feedback/rec.jpg" alt="rec" class="feedback-slide__img-inner">
+                                        <div class="feedback-slide__img-wrapper">
+                                            <div class="feedback-slide__img" style="background-image: url(./img/feedback/1.jpg);">
+                                                <img src="./img/feedback/rec.jpg" alt="rec" class="feedback-slide__img-inner">
+                                            </div>
+                                            <div class="feedback-slide__socials">
+                                                <a href="#" class="feedback-slide__socials-item">
+                                                    <svg width="25" height="25" viewBox="0 0 25 25">
+                                                        <path d="M18.2327 0H6.76726C3.03573 0 0 3.03573 0 6.76726V18.2329C0 21.9642 3.03573 25 6.76726 25H18.2329C21.9642 25 25 21.9642 25 18.2329V6.76726C25 3.03573 21.9642 0 18.2327 0V0ZM12.5 19.3357C8.73068 19.3357 5.66424 16.2693 5.66424 12.5C5.66424 8.73068 8.73068 5.66424 12.5 5.66424C16.2693 5.66424 19.3357 8.73068 19.3357 12.5C19.3357 16.2693 16.2693 19.3357 12.5 19.3357ZM19.4992 7.27633C18.3853 7.27633 17.4793 6.37034 17.4793 5.25645C17.4793 4.14256 18.3853 3.23638 19.4992 3.23638C20.6131 3.23638 21.5192 4.14256 21.5192 5.25645C21.5192 6.37034 20.6131 7.27633 19.4992 7.27633Z"/>
+                                                        <path d="M12.5 7.12988C9.53899 7.12988 7.12982 9.53886 7.12982 12.5C7.12982 15.461 9.53899 17.8701 12.5 17.8701C15.4611 17.8701 17.8701 15.461 17.8701 12.5C17.8701 9.53886 15.4611 7.12988 12.5 7.12988Z"/>
+                                                        <path d="M19.4992 4.70215C19.1937 4.70215 18.9449 4.95087 18.9449 5.25642C18.9449 5.56198 19.1937 5.8107 19.4992 5.8107C19.805 5.8107 20.0537 5.56217 20.0537 5.25642C20.0537 4.95068 19.805 4.70215 19.4992 4.70215Z"/>
+                                                    </svg>
+                                                </a>
+                                                <a href="#" class="feedback-slide__socials-item">
+                                                    <svg width="27" height="17" viewBox="0 0 27 17">
+                                                        <path d="M22.4044 9.65601C21.9679 9.10476 22.0928 8.85951 22.4044 8.36676C22.41 8.36114 26.0134 3.38189 26.3846 1.69326L26.3869 1.69214C26.5714 1.07676 26.3869 0.624512 25.4948 0.624512H22.5427C21.7913 0.624512 21.4447 1.01264 21.2591 1.44689C21.2591 1.44689 19.7561 5.04464 17.6299 7.37676C16.9436 8.05064 16.6264 8.26664 16.2518 8.26664C16.0672 8.26664 15.7804 8.05064 15.7804 7.43526V1.69214C15.7804 0.954137 15.57 0.624512 14.9479 0.624512H10.3061C9.83475 0.624512 9.55462 0.968762 9.55462 1.28939C9.55462 1.98914 10.6178 2.15001 10.728 4.11876V8.39039C10.728 9.32639 10.5581 9.49851 10.1813 9.49851C9.17775 9.49851 6.74213 5.88614 5.29875 1.75176C5.00738 0.949637 4.72275 0.625637 3.96563 0.625637H1.0125C0.169875 0.625637 0 1.01376 0 1.44801C0 2.21526 1.0035 6.03014 4.6665 11.0701C7.10775 14.5104 10.5458 16.3745 13.6733 16.3745C15.5531 16.3745 15.7826 15.9605 15.7826 15.2484C15.7826 11.9611 15.6128 11.6506 16.5544 11.6506C16.9909 11.6506 17.7424 11.8666 19.4974 13.526C21.5033 15.4936 21.8329 16.3745 22.9556 16.3745H25.9076C26.7491 16.3745 27.1755 15.9605 26.9303 15.1438C26.3689 13.4259 22.5754 9.89226 22.4044 9.65601Z"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
                                         <div class="feedback-slide__main">
                                             <div class="feedback-slide__title">Онлайн школа Сергея Свирида «SMM-специалист»</div>
@@ -687,8 +709,11 @@
                         </div>
                         <div class="swiper-container feedback-thumbs feedback-thumbs_result">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide feedback-thumbs__item" style="background-image: url(./img/feedback/11.jpg);">
-                                    <img src="./img/feedback/rec2.jpg" alt="rec" class="feedback-thumbs__item-inner">
+                                <div class="swiper-slide feedback-thumbs__item-wrapper">
+                                    <div class="feedback-thumbs__item" style="background-image: url(./img/feedback/11.jpg);">
+                                        <img src="./img/feedback/rec2.jpg" alt="rec" class="feedback-thumbs__item-inner">
+                                    </div>
+                                    <div class="feedback-thumbs__item-text">Психология и социальная адаптация</div>
                                 </div>
                                 <div class="swiper-slide feedback-thumbs__item" style="background-image: url(./img/feedback/12.jpg);">
                                     <img src="./img/feedback/rec2.jpg" alt="rec" class="feedback-thumbs__item-inner">
