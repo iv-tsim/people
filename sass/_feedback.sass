@@ -1,5 +1,5 @@
 .feedback
-    padding: 190px 0
+    padding: 150px 0
     &-title
         margin-bottom: 40px
         text-align: center
@@ -93,12 +93,28 @@
                 visibility: hidden
                 width: 100%
                 display: block
-            iframe
+            .youtube, iframe
                 position: absolute
                 left: 0
                 top: 0
                 width: 100%
                 height: 100%
+                background-position: center center
+                background-repeat: no-repeat
+                background-size: cover
+                .play
+                    background: url('../img/feedback/youtube-play-btn.png') no-repeat
+                    background-position: 0 -50px
+                    background-size: 100% auto
+                    position: absolute
+                    height: 50px
+                    width: 69px
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                &:hover
+                    .play
+                        background-position: 0 0
         &__img
             background-repeat: no-repeat
             background-position: center center
@@ -208,7 +224,7 @@
 
 @media (max-width: 1670px)
     .feedback
-        padding: 140px 0
+        padding: 130px 0
         &-title
             margin-bottom: 30px
         &-subtitle
@@ -235,7 +251,7 @@
 
 @media (max-width: 1500px)
     .feedback
-        padding: 120px 0
+        padding: 110px 0
         &-title
             margin-bottom: 30px
         &-subtitle
@@ -275,7 +291,7 @@
 
 @media (max-width: 1300px)
     .feedback
-        padding: 100px 0
+        padding: 90px 0
         &-title
             margin-bottom: 25px
         &-subtitle

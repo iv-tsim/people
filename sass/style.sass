@@ -271,42 +271,52 @@ ul
     display: flex
     &-text
         width: 100%
-        top: 0
-        background-color: $blue
+        background: linear-gradient(180deg, #DD009F 0%, #FF001F 100%)
         position: relative
         z-index: 1
-        padding: 22px 40px
+        padding: 25px 45px
         text-align: center
         border-radius: 60px
         font-weight: 500
         text-transform: uppercase
         color: #fff
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.35), inset 0px 2px 3px rgba(255, 255, 255, 0.35), inset 0px -2px 3px rgba(0, 0, 0, 0.5)
     &::before
         position: absolute
         display: block
         content: ''
-        bottom: -4px
-        left: -2px
-        width: 100%
-        height: 100%
-        background-color: $darkBlue
+        width: calc(100% + 18px)
+        height: calc(100% + 16px)
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
         border-radius: 60px
         z-index: 0
+        background: linear-gradient(180deg, #313030 0%, #141414 100%)
+    &:hover
+        .btn-text
+            background: linear-gradient(180deg, #FF001F 0%, #DD009F 100%)
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.35), inset 0px 2px 3px rgba(255, 255, 255, 0.35), inset 0px -2px 3px rgba(0, 0, 0, 0.5)
     &:active
         .btn-text
-            top: 4px
+            box-shadow: inset 0px 2px 3px #000000, inset 0px -2px 3px #7B7A7A
+        &::before
+            background: linear-gradient(180deg, #313030 0%, #121212 100%)
     &_filled
         .btn-text
-            background-color: $red
+            background: linear-gradient(180deg, #04A5FF 0%, #0042A5 100%)
+        &:hover
+            .btn-text
+                background: linear-gradient(180deg, #0042A5 0%, #04A5FF 100%)
+    &_yellow
         &::before
-            background-color: $darkRed
-    &_white
+            display: none
         .btn-text
+            background: linear-gradient(180deg, #FFF500 0%, #FFC700 100%)
             color: #000
-            padding: 23px 45px
-            background-color: #fff
-        &::before
-            background-color: darken(#fff, 20%)
+        &:hover, &:active
+            .btn-text
+                background: linear-gradient(180deg, #FFC700 0%, #FFF500 100%)
 
 @media (max-width: 1670px)
     .section
@@ -320,9 +330,6 @@ ul
         &-text
             padding: 20px 30px
             font-size: 18px
-        &_white
-            .btn-text
-                padding: 20px 40px
 
 @media (max-width: 1400px)
     .section
@@ -388,9 +395,6 @@ ul
         &-text
             padding: 14px 20px
             font-size: 16px
-        &_white
-            .btn-text
-                padding: 14px 25px
     .submit
         width: 160px
         height: 160px
