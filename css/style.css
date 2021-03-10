@@ -403,7 +403,7 @@ ul li:last-child {
   background: linear-gradient(180deg, #DD009F 0%, #FF001F 100%);
   position: relative;
   z-index: 1;
-  padding: 25px 45px;
+  padding: 25px 42px;
   text-align: center;
   border-radius: 60px;
   font-weight: 500;
@@ -788,6 +788,16 @@ ul li:last-child {
   width: 100%;
   border-radius: 100%;
   opacity: 0.4;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.hero-video__img-inner {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  display: block;
 }
 
 .hero-video__inner {
@@ -2210,7 +2220,7 @@ ul li:last-child {
 
 .begin-quiz__inputs {
   max-width: 520px;
-  min-height: 320px;
+  min-height: 250px;
 }
 
 .begin-quiz__form {
@@ -2866,15 +2876,6 @@ ul li:last-child {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin: 0 15px;
-  border: 3px solid #000;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 35px 50px;
-  text-align: center;
-  -webkit-transition: .3s color, .3s border-color, .3s background-color;
-  transition: .3s color, .3s border-color, .3s background-color;
-  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2884,19 +2885,29 @@ ul li:last-child {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 15px;
+  cursor: pointer;
   border-radius: 60px;
-}
-
-.feedback-tabs__item:hover {
-  border-color: #0066FF;
-  background-color: #0066FF;
-  color: #fff;
+  padding: 25px 15px;
+  color: #8F8F8F;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: -webkit-gradient(linear, left top, left bottom, from(#E0E0E0), to(#FFFFFF));
+  background: linear-gradient(180deg, #E0E0E0 0%, #FFFFFF 100%);
+  -webkit-box-shadow: inset 0px 2px 5px #CBCBCB, inset 0px -4px 6px rgba(202, 202, 202, 0.2);
+          box-shadow: inset 0px 2px 5px #CBCBCB, inset 0px -4px 6px rgba(202, 202, 202, 0.2);
+  text-align: center;
 }
 
 .feedback-tabs__item.active {
   border-color: #0066FF;
   background-color: #0066FF;
   color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#04A5FF), to(#0042A5));
+  background: linear-gradient(180deg, #04A5FF 0%, #0042A5 100%);
+  -webkit-box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.35), inset 0px 2px 3px rgba(255, 255, 255, 0.35), inset 0px -2px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.35), inset 0px 2px 3px rgba(255, 255, 255, 0.35), inset 0px -2px 3px rgba(0, 0, 0, 0.2);
 }
 
 .feedback-body {
@@ -3024,8 +3035,8 @@ ul li:last-child {
 
 .feedback-slide__img {
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-position: center bottom;
+  background-size: contain;
   margin-bottom: 15px;
 }
 
@@ -3046,12 +3057,14 @@ ul li:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.feedback-slide__socials-text {
+  font-size: 12px;
+  margin-right: 5px;
 }
 
 .feedback-slide__socials-item {
@@ -3155,7 +3168,8 @@ ul li:last-child {
   top: 0;
   left: 0;
   height: 100%;
-  border: 3px solid #FFF500;
+  -webkit-box-shadow: inset 0 0 0 3px #FFF500;
+          box-shadow: inset 0 0 0 3px #FFF500;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: .3s opacity, .3s visibility;
@@ -3235,7 +3249,7 @@ ul li:last-child {
     margin-bottom: 80px;
   }
   .feedback-tabs__item {
-    padding: 30px 40px;
+    padding: 22px 15px;
   }
   .feedback-slider__wrapper {
     margin-bottom: 80px;
@@ -3344,17 +3358,16 @@ ul li:last-child {
   }
   .feedback-tabs {
     margin-bottom: 50px;
+    padding: 0;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+  }
+  .feedback-tabs__item {
+    margin: 0 10px;
+    font-size: 18px;
   }
   .feedback-slider__wrapper {
     margin-bottom: 40px;
-  }
-  .feedback-tabs {
-    padding: 0;
-    width: calc(100% + 30px);
-    margin-left: -15px;
-  }
-  .feedback-tabs__item {
-    padding: 25px 40px;
   }
   .feedback-slide__img-wrapper {
     margin-right: 40px;
@@ -3384,7 +3397,7 @@ ul li:last-child {
     margin-bottom: 30px;
   }
   .feedback-tabs__item {
-    padding: 20px 30px;
+    padding: 20px 15px;
   }
   .feedback-slide__img-wrapper {
     margin-right: 30px;
@@ -3504,6 +3517,12 @@ ul li:last-child {
   }
   .feedback-slide__list-item__name::after {
     display: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .feedback-tabs__item {
+    font-size: 14px;
   }
 }
 

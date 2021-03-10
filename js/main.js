@@ -45,6 +45,9 @@
 
         }
 
+        const resultResultThumbsNumber = document.querySelectorAll('.feedback-thumbs_result .feedback-thumbs__item-wrapper').length;
+        const resultCommentThumbsNumber = document.querySelectorAll('.feedback-thumbs_comment .feedback-thumbs__item-wrapper').length;
+
         let feedbackThumbsResult = new Swiper('.feedback-thumbs_result', {
 
             speed: 600,
@@ -107,8 +110,8 @@
 
         });
 
-        feedbackThumbsResult.params.loop = checkSlides(feedbackThumbsResult.params.slidesPerView, feedbackThumbsResult.slides.length).loop;
-        feedbackThumbsResult.params.centerInsufficientSlides = checkSlides(feedbackThumbsResult.params.slidesPerView, feedbackThumbsResult.slides.length).center;
+        feedbackThumbsResult.params.loop = checkSlides(feedbackThumbsResult.params.slidesPerView, resultResultThumbsNumber).loop;
+        feedbackThumbsResult.params.centerInsufficientSlides = checkSlides(feedbackThumbsResult.params.slidesPerView, resultResultThumbsNumber).center;
 
         feedbackThumbsResult.init();
 
@@ -174,8 +177,8 @@
 
         });
 
-        feedbackThumbsComment.params.loop = checkSlides(feedbackThumbsComment.params.slidesPerView, feedbackThumbsComment.slides.length).loop;
-        feedbackThumbsComment.params.centerInsufficientSlides = checkSlides(feedbackThumbsComment.params.slidesPerView, feedbackThumbsComment.slides.length).center;
+        feedbackThumbsComment.params.loop = checkSlides(feedbackThumbsComment.params.slidesPerView, resultCommentThumbsNumber).loop;
+        feedbackThumbsComment.params.centerInsufficientSlides = checkSlides(feedbackThumbsComment.params.slidesPerView, resultCommentThumbsNumber).center;
 
         feedbackThumbsComment.init();
 
@@ -188,6 +191,7 @@
             observer: true,
             observeParents: true,
             touchEventsTarget: 'wrapper',
+            loop: true,
             navigation: {
                 prevEl: '.feedback-slider__arrow.feedback-slider__arrow_prev.feedback-slider__arrow_result',
                 nextEl: '.feedback-slider__arrow.feedback-slider__arrow_next.feedback-slider__arrow_result'
@@ -208,6 +212,7 @@
             loop: true,
             observeParents: true,
             touchEventsTarget: 'wrapper',
+            loop: true,
             navigation: {
                 prevEl: '.feedback-slider__arrow.feedback-slider__arrow_prev.feedback-slider__arrow_comment',
                 nextEl: '.feedback-slider__arrow.feedback-slider__arrow_next.feedback-slider__arrow_comment'
@@ -452,16 +457,6 @@
 
             }
 
-            if (target.closest('.footer-btn_feedback')) {
-
-                event.preventDefault();
-
-                document.querySelector('#feedback').scrollIntoView({block: "start", behavior: "smooth"});
-
-                show(1, tabsTop, tabsBodies);
-
-            }
-
             if (target.closest('.begin-quiz__next_btn')) {
 
                 document.querySelector('.quiz-hiddenSubmit').click();
@@ -505,5 +500,23 @@ $(document).ready(function() {
           this_custom.addClass("active");
         }
     });
+
+    function countup(className){
+		var countBlockTop = $("."+className).offset().top;
+		var windowHeight = window.innerHeight;
+		var show = true;
+					
+		$(window).scroll( function (){
+			if(show && (countBlockTop < $(window).scrollTop() + windowHeight)){ 
+				show = false;
+						
+				$('.'+className).spincrement({
+					thousandSeparator: ''
+				});
+			}
+		})	
+	}
+
+    countup("spin");
 
 });
