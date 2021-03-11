@@ -390,6 +390,54 @@ ul li:last-child {
   color: #000;
 }
 
+span.line {
+  position: relative;
+}
+
+span.line::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  content: '';
+  height: 17px;
+  width: 0;
+  background-color: #0066FF;
+  -webkit-animation-name: line;
+          animation-name: line;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+span.line:nth-child(2)::after {
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+
+@-webkit-keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
 .btn {
   position: relative;
   display: -webkit-box;
@@ -478,6 +526,9 @@ ul li:last-child {
   .section-subtitle {
     font-size: 28px;
   }
+  span.line::after {
+    height: 15px;
+  }
 }
 
 @media (max-width: 1500px) {
@@ -494,11 +545,17 @@ ul li:last-child {
   .section-subtitle {
     font-size: 24px;
   }
+  span.line::after {
+    height: 13px;
+  }
 }
 
 @media (max-width: 1300px) {
   .section-title {
     font-size: 44px;
+  }
+  span.line::after {
+    height: 12px;
   }
   body {
     font-size: 18px;
@@ -536,6 +593,9 @@ ul li:last-child {
   .section-subtitle {
     font-size: 22px;
   }
+  span.line::after {
+    height: 9px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -555,6 +615,9 @@ ul li:last-child {
 @media (max-width: 900px) {
   .section-title {
     font-size: 32px;
+  }
+  span.line::after {
+    height: 8px;
   }
 }
 
@@ -590,6 +653,9 @@ ul li:last-child {
   }
   .section-subtitle {
     font-size: 20px;
+  }
+  span.line::after {
+    height: 7px;
   }
   .arrow-circle {
     width: 65px;
@@ -996,7 +1062,7 @@ ul li:last-child {
   margin-bottom: 70px;
 }
 
-.hero-text__title span {
+.hero-text__title div {
   font-weight: 400;
   display: block;
 }

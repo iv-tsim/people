@@ -266,6 +266,31 @@ ul
         &_black
             color: #000
 
+span.line
+    position: relative
+    &::after
+        position: absolute
+        bottom: 0
+        left: 0
+        display: block
+        content: ''
+        height: 17px
+        width: 0
+        background-color: $blue
+        animation-name: line
+        animation-duration: .4s
+        animation-delay: .5s
+        animation-iteration-count: 1
+        animation-fill-mode: forwards
+    &:nth-child(2)
+        &::after
+            animation-delay: .7s
+
+@keyframes line
+    0%
+        width: 0
+    100%
+        width: 90%
 .btn
     position: relative
     display: flex
@@ -324,6 +349,9 @@ ul
             font-size: 60px
         &-subtitle
             font-size: 28px
+    span.line
+        &::after
+            height: 15px
 
 @media (max-width: 1500px)
     .btn
@@ -337,11 +365,17 @@ ul
             font-size: 50px
         &-subtitle
             font-size: 24px
+    span.line
+        &::after
+            height: 13px
 
 @media (max-width: 1300px)
     .section
         &-title
             font-size: 44px
+    span.line
+        &::after
+            height: 12px
     body
         font-size: 18px
     ul
@@ -373,6 +407,9 @@ ul
             font-size: 36px
         &-subtitle
             font-size: 22px
+    span.line
+        &::after
+            height: 9px
 
 @media (max-width: 1000px)
     .submit
@@ -389,6 +426,9 @@ ul
     .section
         &-title
             font-size: 32px
+    span.line
+        &::after
+            height: 8px
 
 @media (max-width: 800px)
     .btn
@@ -417,6 +457,9 @@ ul
             font-size: 26px
         &-subtitle
             font-size: 20px
+    span.line
+        &::after
+            height: 7px
     .arrow
         &-circle
             width: 65px
