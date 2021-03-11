@@ -1930,6 +1930,7 @@ span.line:nth-child(2)::after {
 .strategy {
   background-color: #FFF500;
   padding: 30px 0;
+  overflow: hidden;
 }
 
 .strategy-container {
@@ -1975,7 +1976,7 @@ span.line:nth-child(2)::after {
   text-align: right;
 }
 
-.strategy-number__text span:last-child {
+.strategy-number__text div:last-child {
   margin-right: -75px;
 }
 
@@ -1993,7 +1994,7 @@ span.line:nth-child(2)::after {
     font-size: 60px;
     bottom: 30px;
   }
-  .strategy-number__text span:last-child {
+  .strategy-number__text div:last-child {
     margin-right: -50px;
   }
 }
@@ -2012,7 +2013,7 @@ span.line:nth-child(2)::after {
     font-size: 50px;
     bottom: 30px;
   }
-  .strategy-number__text span:last-child {
+  .strategy-number__text div:last-child {
     margin-right: -30px;
   }
 }
@@ -2034,7 +2035,7 @@ span.line:nth-child(2)::after {
     font-size: 45px;
     bottom: 30px;
   }
-  .strategy-number__text span:last-child {
+  .strategy-number__text div:last-child {
     margin-right: -20px;
   }
 }
@@ -2063,7 +2064,7 @@ span.line:nth-child(2)::after {
     bottom: 20px;
     right: 10px;
   }
-  .strategy-number__text span:last-child {
+  .strategy-number__text div:last-child {
     margin-right: -20px;
   }
 }

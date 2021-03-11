@@ -1,6 +1,7 @@
 .strategy
     background-color: $yellow
     padding: 30px 0
+    overflow: hidden
     &-container
         display: flex
         justify-content: space-between
@@ -28,7 +29,7 @@
             bottom: 20px
             right: 0
             text-align: right
-            span
+            div
                 &:last-child
                     margin-right: -75px
 
@@ -43,7 +44,7 @@
             &__text
                 font-size: 60px
                 bottom: 30px
-                span:last-child
+                div:last-child
                     margin-right: -50px
 
 @media (max-width: 1300px)
@@ -57,7 +58,7 @@
             &__text
                 font-size: 50px
                 bottom: 30px
-                span:last-child
+                div:last-child
                     margin-right: -30px
 
 @media (max-width: 900px)
@@ -72,7 +73,7 @@
             &__text
                 font-size: 45px
                 bottom: 30px
-                span:last-child
+                div:last-child
                     margin-right: -20px
 
 @media (max-width: 700px)
@@ -92,5 +93,5 @@
                 font-size: 30px
                 bottom: 20px
                 right: 10px
-                span:last-child
+                div:last-child
                     margin-right: -20px
