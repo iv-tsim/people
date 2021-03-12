@@ -3979,6 +3979,8 @@ span.line:nth-child(2)::after {
   grid-column: span 4;
   cursor: pointer;
   position: relative;
+  -webkit-transition: .3s box-shadow;
+  transition: .3s box-shadow;
 }
 
 .team-item__img {
@@ -4002,6 +4004,11 @@ span.line:nth-child(2)::after {
   visibility: hidden;
   -webkit-transition: .3s opacity, .3s visibility;
   transition: .3s opacity, .3s visibility;
+}
+
+.team-item:hover {
+  -webkit-box-shadow: 0px 0px 125px 50px #0066ff;
+          box-shadow: 0px 0px 125px 50px #0066ff;
 }
 
 .team-item:hover .team-item__img_hover {
