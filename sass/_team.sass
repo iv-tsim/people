@@ -24,6 +24,8 @@
         cursor: pointer
         position: relative
         transition: .3s box-shadow
+        &__text
+            display: none
         &__img
             background-repeat: no-repeat
             background-position: center center
@@ -141,6 +143,20 @@
                 &:last-child
                     margin-right: 0
 
+@keyframes shake
+    0%
+        transform: translateX(-50%) rotate(0deg)
+    47.5%
+        transform: translateX(-50%) rotate(0deg)
+    48.75%
+        transform: translateX(-50%) rotate(20deg)
+    51.25%
+        transform: translateX(-50%) rotate(-20deg)
+    52.5%
+        transform: translateX(-50%) rotate(0deg)
+    100%
+        transform: translateX(-50%) rotate(0deg)
+
 @media (max-width: 1670px)
     .team
         padding-bottom: 140px
@@ -251,6 +267,25 @@
                 font-size: 18px
                 text-align: left
 
+@media (max-width: 600px)
+    .team
+        &-item
+            &__text
+                display: block
+                position: absolute
+                bottom: 40px
+                left: 50%
+                color: #fff
+                z-index: 1
+                font-weight: 700
+                padding: 10px
+                background-color: $blue
+                animation-name: shake
+                animation-duration: 6s
+                animation-iteration-count: infinite
+                animation-timing-function: linear
+                animation-fill-mode: forwards
+
 @media (max-width: 500px)
     .team
         padding-bottom: 50px
@@ -264,3 +299,16 @@
         &-item
             &:nth-child(2)
                 max-width: 100%
+
+@media (max-width: 374px)
+    .team
+        &-item
+            &__text
+                font-size: 16px
+                bottom: 30px
+
+@media (max-width: 340px)
+    .team
+        &-item
+            &__text
+                font-size: 14px
